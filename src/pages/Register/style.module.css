@@ -1,0 +1,54 @@
+.myRegister{
+    height: 800px;
+    background-image: url("https://i.pinimg.com/originals/ca/22/50/ca22505c8e7d0ff08c83cb1c73d0f919.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerForm{
+    width: 400px;
+    height: 500px;
+    background-color: rgba(92, 91, 91, 0.452);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    
+}
+
+.registerForm input{
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+}
+.registerForm h1{
+    font-size: 60px;
+    color: white;
+    font-family: cursive;
+}
+
+.registerForm button{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(23, 127, 54);
+    color: white;
+    font-size: 18px;
+}
+.registerForm button:hover{
+    background-color: rgb(184, 207, 203);
+    transition: 0.4s;
+    cursor: pointer;
+    color: black;
+}
+.registerForm label{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}

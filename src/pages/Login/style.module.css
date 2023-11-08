@@ -1,0 +1,65 @@
+.myForm{
+    height: 800px;
+     background-image: url("https://wallpapercave.com/wp/wp11145908.jpg");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     flex-wrap: wrap;
+     
+ }
+ 
+ .loginForm{
+     width: 400px;
+     height: 400px;
+     background-color: rgba(255, 255, 255, 0.336);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     flex-wrap: wrap;
+     row-gap: 30px;
+     border-radius: 20px;
+     
+ 
+ }
+ 
+ .loginForm h1{
+     font-size: 50px;
+     color: white;
+     font-family: cursive;
+     
+ }
+ .loginForm input {
+     width: 350px;
+     height: 40px;
+     border-radius: 5px;
+     border: none;
+ }
+ .loginForm label {
+     font-size: 20px;
+     color: rgba(255, 255, 255, 0.63);
+     
+ }
+ 
+ .loginForm button{
+     width: 80px;
+     height: 40px;
+     background-color: blueviolet;
+     border: none;
+     border-radius: 10px;
+     color: white;
+     font-size: 18px;
+     font-family: cursive;
+ }
+ .loginForm button:hover{
+     background-color: rgb(187, 166, 243);
+     transition: 0.5s;
+     color: brown;
+     cursor: pointer;
+ }
+ 
+ 

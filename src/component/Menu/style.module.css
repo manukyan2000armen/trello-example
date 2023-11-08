@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.myMenu{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(232, 232, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.myMenuList{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.myMenuList ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.myMenuList li{
+    list-style: none;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+
+    
+}
+.myMenuList li:hover{
+    transition: .4s;
+    background-color: rgb(138, 137, 138);
+    cursor: pointer;
+   
+}
+.myMenuList a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.myMenuList .btnLogOut{
+    list-style: none;
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.btnLogOut:hover{
+    transition: .4s;
+    background-color: rgb(138, 137, 138);
+    cursor: pointer;
+}

@@ -1,0 +1,8 @@
+.myTable {
+  width: 100%;
+  min-height: 700px;
+  background-image: url("https://i.pinimg.com/originals/6d/45/f3/6d45f38dad7c0a9345e83b7e1df3c803.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
