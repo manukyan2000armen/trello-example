@@ -10,12 +10,15 @@ export const deleteTask = (payload: { id: number; taskId: number } | any) => ({
   payload,
 });
 
-export const updateTask = (payload: Task) => ({
+export const updateTask = (payload: { id: number; task: Task }) => ({
   type: TaskEnum.UPDATE_TASK,
   payload,
 });
 
-export const archiveTask = (payload: { id: number|null; taskId: number  }) => ({
+export const archiveTask = (payload: {
+  id: number | null;
+  taskId: number;
+}) => ({
   type: TaskEnum.ARCHIVE_TASK,
   payload,
 });
@@ -26,6 +29,15 @@ export const removeTaskArchive = (payload: number) => ({
 });
 export const deleteTaskArchive = (payload: number) => ({
   type: TaskEnum.DELETE_TASK_ARCHIVE,
+  payload,
+});
+export const copyTask = (payload: { id: number; taskId: number}) => ({
+  type: TaskEnum.COPY_TASK,
+  payload,
+});
+
+export const changeDueDate = (payload :{ id:any; taskId:number; newDueDate:number }) => ({
+  type: TaskEnum.CHANGE_DUE_DATE,
   payload,
 });
 

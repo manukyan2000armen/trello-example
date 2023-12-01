@@ -4,7 +4,7 @@ export type Task = {
   desc: string;
   status: string;
   deadline: string;
-  assigned: string[];
+  assigned: string;
   archived: boolean;
 };
 
@@ -14,8 +14,10 @@ export enum TaskEnum {
   UPDATE_TASK = "update",
   ARCHIVE_TASK = "archive",
   REORDER_TASKS = "REORDER_TASKS",
-  REMOVE_TASK_ARCHIVE = 'removeArchive',
-  DELETE_TASK_ARCHIVE = 'delArchive'
+  REMOVE_TASK_ARCHIVE = "removeArchive",
+  DELETE_TASK_ARCHIVE = "delArchive",
+  COPY_TASK = 'copy',
+  CHANGE_DUE_DATE = 'change',
 }
 
 export type User = {

@@ -3,29 +3,27 @@ import { Task } from "../../store/type";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deleteTaskArchive, removeTaskArchive } from "../../store/tasks/action";
-import st from './style.module.css'
+import st from "./style.module.css";
 import { number } from "yup";
 
 function Archives() {
   const { archiveArr } = useSelector((st: any) => st.task);
-  console.log("archive", archiveArr);
+  // console.log("archive", archiveArr);
 
   const dispatch = useDispatch();
 
   const removeTaskFromArchive = (id: number) => {
     dispatch(removeTaskArchive(id));
-    console.log('del' , id);
+    // console.log("del", id);
   };
 
-  const handleDeleteTaskArchive = ( id:number) => {
+  const handleDeleteTaskArchive = (id: number) => {
     dispatch(deleteTaskArchive(id));
-    console.log('del', id);
+    // console.log("del", id);
   };
-
 
   return (
     <>
-      
       <div className={st.divForArchive}>
         {archiveArr?.map((elm: { task: Task; boardId: number; id: number }) => {
           return (
@@ -36,19 +34,15 @@ function Archives() {
               <p>Deadline: {elm.task.deadline}</p>
               <ul>
                 <label>Assigned_To:</label>
-                {
-                  elm.task.assigned.map((elm:any) => {
-                    return <li key={elm.id}>{elm}</li>
-                  })
-                }
+                <li>{elm.task.assigned}</li>
               </ul>
               <div className={st.forRemoveAndDelete}>
-              <button onClick={() => removeTaskFromArchive(elm.id)}>
-                Remove 
-              </button>
-              <button onClick={() => handleDeleteTaskArchive(elm.id)}>
-                Delete 
-              </button>
+                <button onClick={() => removeTaskFromArchive(elm.id)}>
+                  Remove
+                </button>
+                <button onClick={() => handleDeleteTaskArchive(elm.id)}>
+                  Delete
+                </button>
               </div>
             </div>
           );

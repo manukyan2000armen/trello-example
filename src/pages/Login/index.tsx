@@ -4,21 +4,19 @@ import { useForm } from "react-hook-form";
 import { User } from "../../store/type";
 import Swal from "sweetalert2";
 import st from "./style.module.css";
-import { addUser } from "../../store/user/action";
 
 function Login() {
   const { arrUser } = useSelector((st: any) => st.users);
-  console.log(arrUser);
-  
+  // console.log(arrUser);
+
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const save = (data: User) => {
     const us = arrUser.find(
       (elm: User) => elm.email === data.email && elm.password === data.password
-      );
-      // dispatch(addUser(data))
+    );
     if (us) {
-      localStorage.setItem("userId", us.id)
+      localStorage.setItem("userId", us.id);
       navigate("/profile");
     } else {
       Swal.fire({
@@ -49,7 +47,10 @@ function Login() {
                   type="text"
                   {...register("email", {
                     required: "Fill the field",
-                    pattern: { value:/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, message: "Fill letters" },
+                    pattern: {
+                      value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                      message: "Fill letters",
+                    },
                   })}
                 />
                 {errors.email && (
@@ -63,7 +64,10 @@ function Login() {
                   type="text"
                   {...register("password", {
                     required: "Fill the field",
-                    pattern: { value: /(?=.*\d)/, message: "Fill letters and numbers" },
+                    pattern: {
+                      value: /(?=.*\d)/,
+                      message: "Fill letters and numbers",
+                    },
                   })}
                 />
               </div>

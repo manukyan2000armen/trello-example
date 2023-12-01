@@ -7,6 +7,7 @@
   transition: 0.4s;
   color: white;
 }
+
 .btnAdd {
   width: 100%;
   height: 35px;
@@ -21,6 +22,7 @@
   padding: 5px;
   font-weight: 600;
 }
+
 .btnAdd:hover {
   transition: 0.4s;
   background-color: rgb(220, 221, 220);
@@ -46,6 +48,7 @@
   flex-direction: column;
   padding-left: 5px;
 }
+
 .tasksCard h3 {
   font-size: 16px;
   font-weight: 600;
@@ -63,11 +66,11 @@
 }
 
 select {
-  width: 120px;
-  height: 60px;
+  width: 185px;
+  height: 30px;
   border: none;
   border-radius: 7px;
-  background-color: rgb(109, 135, 135);
+  background-color: rgb(227, 228, 228);
   color: white;
 }
 
@@ -81,6 +84,7 @@ select {
   flex-direction: column;
   gap: 5px;
 }
+
 .divForTitleAdd textarea {
   width: 380px;
   height: 90px;
@@ -90,11 +94,13 @@ select {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+
 .forButtons {
   width: 100%;
   height: 50px;
   /* background-color: red; */
 }
+
 .btnClose {
   width: 35px;
   height: 35px;
@@ -104,6 +110,7 @@ select {
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   transition: 0.4s;
 }
+
 .btnClose:hover {
   transition: 0.4s;
   background-color: rgb(197, 197, 197);
@@ -120,6 +127,7 @@ select {
   flex-direction: column;
   padding: 10px;
 }
+
 .done {
   width: 400px;
   min-height: 100px;
@@ -142,6 +150,7 @@ select {
   justify-content: center;
   align-items: center;
   transition: 0.9s ease-in;
+  z-index: 1;
 }
 
 .modalContent {
@@ -157,6 +166,7 @@ select {
   width: 700px;
   height: 500px;
 }
+
 .task {
   width: 100%;
   height: 100%;
@@ -165,6 +175,7 @@ select {
   justify-content: center;
   align-items: center;
 }
+
 .forModalMenu {
   width: 100%;
   height: 100%;
@@ -175,10 +186,12 @@ select {
   height: 35px;
   transition: 0.4s;
 }
+
 .btnPen:hover {
   transition: 0.4s;
   background-color: rgb(184, 184, 184);
 }
+
 .tasksData {
   width: 400px;
   height: 100%;
@@ -191,10 +204,12 @@ select {
   border-radius: 5px;
   padding: 5px;
 }
+
 .tasksData h2 {
   font-size: 20px;
   font-weight: 600;
 }
+
 .tasksData textarea {
   width: 380px;
   min-height: 110px;
@@ -202,6 +217,7 @@ select {
   border-radius: 3px;
   border: 1px solid gray;
 }
+
 .btnSave {
   width: 90px;
   height: 40px;
@@ -211,11 +227,13 @@ select {
   color: white;
   transition: 0.4s;
 }
+
 .btnSave:hover {
   transition: 0.4s;
   background-color: rgb(133, 167, 133);
   cursor: pointer;
 }
+
 .forCloseModalBtn {
   width: 100%;
   height: 30px;
@@ -223,6 +241,7 @@ select {
   justify-content: flex-end;
   align-items: flex-end;
 }
+
 .closeModal {
   background-color: #acacac;
   color: rgb(0, 0, 0);
@@ -234,6 +253,7 @@ select {
   transition: 0.5s;
   font-size: 13px;
 }
+
 .closeModal:hover {
   transition: 0.5s;
   background-color: #cac6c6;
@@ -262,7 +282,7 @@ select {
 }
 
 .board {
-  width: 300px;
+  width: 350px;
   min-height: 200px;
   background-color: rgb(248, 248, 248);
   display: flex;
@@ -273,6 +293,7 @@ select {
   gap: 5px;
   border-radius: 5px;
 }
+
 .board h3 {
   font-weight: 600;
 }
@@ -301,10 +322,12 @@ select {
   font-weight: 500;
   transition: 0.4s;
 }
+
 .archiveBtn:hover {
   transition: 0.4s;
   background-color: #5f5f5f;
 }
+
 .deleteBtn {
   width: 35px;
   height: 35px;
@@ -312,6 +335,7 @@ select {
   border-radius: 3px;
   background-color: #7e1818;
 }
+
 .btnForDeleteTask {
   width: 130px;
   height: 35px;
@@ -321,6 +345,7 @@ select {
   color: white;
   transition: 0.4s;
 }
+
 .btnForDeleteTask:hover {
   transition: 0.4s;
   background-color: #cccccc;
@@ -335,20 +360,14 @@ select {
   gap: 10px;
 }
 
-.dropdownContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1;
-}
+
 .closeDropdown {
   width: 30px;
   height: 30px;
   background-color: grey;
 }
 
-.archiveDiv{
+.archiveDiv {
   width: 100%;
   height: 30px;
   display: flex;
@@ -356,25 +375,26 @@ select {
   align-items: flex-end;
   background-color: rgba(151, 17, 17, 0);
 }
-.archiveDiv h2{
+
+.archiveDiv h2 {
   font-size: 20px;
 }
-.archiveDiv button{
+
+.archiveDiv button {
   width: 80px;
   height: 30px;
   background-color: #858585;
   color: black;
   font-weight: 500;
-  transition: .1s;
-
+  transition: 0.1s;
 }
-.archiveDiv button:hover{
-  transition: .1s;
+
+.archiveDiv button:hover {
+  transition: 0.1s;
   background-color: #d1cece;
-
 }
 
-.archiveDiv .modal{
+.archiveDiv .modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -386,30 +406,29 @@ select {
   align-items: center;
   transition: 0.9s ease-in;
 }
-.archiveDiv .modalContent{
-  
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    width: 700px;
-    height: 500px;
-    
-  
+
+.archiveDiv .modalContent {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 700px;
+  height: 500px;
 }
-.archiveDiv .modalContent .closeModal{
+
+.archiveDiv .modalContent .closeModal {
   width: 30px;
   height: 30px;
   background-color: rgb(173, 173, 173);
- transition: .3s;
-
+  transition: 0.3s;
 }
-.archiveDiv .modalContent .closeModal:hover{
- transition: .3s;
+
+.archiveDiv .modalContent .closeModal:hover {
+  transition: 0.3s;
   background-color: rgb(217, 216, 216);
 }

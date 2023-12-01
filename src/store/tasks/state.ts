@@ -1,12 +1,16 @@
 import { Task, User } from "../type";
 
 export const data: {
-  archiveArr: {task:Task, boardId:number, id:number}[];
+  archiveArr: { task: Task; boardId: number; id: number }[];
   obj: Task;
   arr: { id: number; title: string; items: Task[] }[];
+  copiedTasks: {},
+
 } = {
   archiveArr: [],
   obj: {} as Task,
+  copiedTasks: {},
+  
   arr: [
     {
       id: 1,
@@ -18,19 +22,39 @@ export const data: {
           desc: "Task Description",
           status: "Assigned",
           deadline: "25.01.2024",
-          assigned: ["Anna", "Karen"],
-          archived: false
+          assigned: "Karen",
+          archived: false,
         },
+        
         {
           id: 2,
           title: "Learn Js",
           desc: "Task Description",
           status: "Assigned",
           deadline: "25.01.2024",
-          assigned: ["Anna", "Karen"],
-          archived: false
-
+          assigned: "Karen",
+          archived: false,
         },
+        {
+          id: 3,
+          title: "Go to School",
+          desc: "Task Description",
+          status: "Assigned",
+          deadline: "25.01.2024",
+          assigned: "Karen",
+          archived: false,
+        },
+        {
+          id: 4,
+          title: "Learn Js",
+          desc: "Task Description",
+          status: "Assigned",
+          deadline: "25.01.2024",
+          assigned: "Karen",
+          archived: false,
+        },
+        
+        
       ],
     },
     {
@@ -43,9 +67,8 @@ export const data: {
           desc: "Task Description",
           status: "Assigned",
           deadline: "25.01.2024",
-          assigned: ["Anna", "Karen"],
-          archived: false
-
+          assigned: "Anna",
+          archived: false,
         },
       ],
     },
@@ -59,9 +82,8 @@ export const data: {
           desc: "Task Description",
           status: "Assigned",
           deadline: "25.01.2024",
-          assigned: ["Anna", "Karen"],
-          archived: false
-
+          assigned: "Karen",
+          archived: false,
         },
       ],
     },

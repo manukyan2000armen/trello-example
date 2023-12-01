@@ -3,12 +3,12 @@ import { data } from "./state";
 import produce from "immer";
 
 export const taskReducer = (state = data, action: any) => {
-  console.log("data=>", data);
+  // console.log("data=>", data);
 
   return produce(state, (draft) => {
     switch (action.type) {
       case TaskEnum.ADD_TASK:
-        console.log(action.payload);
+        // console.log(action.payload);
 
         const x = draft.arr.findIndex((elm) => elm.id == action.payload.id);
         if (x != -1) {
@@ -16,7 +16,7 @@ export const taskReducer = (state = data, action: any) => {
         }
         break;
       case TaskEnum.DELETE_TASK:
-        console.log(action.payload);
+        // console.log(action.payload);
 
         const tIndex = draft.arr.findIndex(
           (elm) => elm.id === action.payload.id
@@ -31,11 +31,14 @@ export const taskReducer = (state = data, action: any) => {
         const taskIndex = draft.arr.findIndex(
           (elm) => elm.id === action.payload.id
         );
+        // console.log("action.payload=>", action.payload, taskIndex);
         if (taskIndex !== -1) {
-          draft.arr[taskIndex] = {
-            ...draft.arr[taskIndex],
-            ...action.payload.data,
-          };
+          const item = draft.arr[taskIndex].items.find(
+            (elm) => elm.id == action.payload.task.id
+          );
+          if (item) {
+            item.desc = action.payload.task.desc;
+          }
         }
         break;
       case TaskEnum.ARCHIVE_TASK:
@@ -58,7 +61,7 @@ export const taskReducer = (state = data, action: any) => {
         break;
 
       case TaskEnum.REMOVE_TASK_ARCHIVE:
-        console.log(action.payload);
+        // console.log(action.payload);
         const archiveTaskIndex = draft.archiveArr.findIndex(
           (archiveTask) => archiveTask.id === action.payload
         );
@@ -76,11 +79,53 @@ export const taskReducer = (state = data, action: any) => {
         }
         break;
       case TaskEnum.DELETE_TASK_ARCHIVE:
-        console.log(action.payload);
+        // console.log(action.payload);
         draft.archiveArr = draft.archiveArr.filter(
           (elm) => elm.id != action.payload
         );
         break;
+      case TaskEnum.COPY_TASK:
+        const { id, taskId } = action.payload;
+        const boardIndex = draft.arr.findIndex((board) => board.id === id);
+
+        if (boardIndex !== -1) {
+          const originalTask = draft.arr[boardIndex].items.find(
+            (task) => task.id === taskId
+          );
+
+          if (originalTask) {
+            const copiedTask = {
+              ...originalTask,
+              id: Date.now(),
+            };
+            const arr = draft.arr[boardIndex].items.filter((elm) =>
+              elm.title.startsWith(copiedTask.title)
+            );
+
+            draft.arr[boardIndex].items.push({
+              ...copiedTask,
+              title: `${copiedTask.title}(${arr.length})`,
+            });
+          }
+        }
+        break;
+      case TaskEnum.CHANGE_DUE_DATE:
+        console.log("CHANGE_DUE_DATE=>", action.payload);
+        
+        const taskIndex1 = draft.arr.findIndex(
+          (elm) => elm.id === action.payload.id
+        );
+        // console.log("action.payload=>", action.payload, taskIndex);
+        if (taskIndex1 !== -1) {
+          const item = draft.arr[taskIndex1].items.find(
+            (elm) => elm.id == action.payload.taskId
+          );
+          if (item) {
+            item.deadline = action.payload.newDueDate.toLocaleDateString();
+          }
+        }
+        break;
+
       case TaskEnum.REORDER_TASKS:
         return {
           ...state,

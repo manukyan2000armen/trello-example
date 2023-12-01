@@ -3,9 +3,9 @@ import st from "./style.module.css";
 
 function Menu() {
   const params = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const data = localStorage.getItem("userId");
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
@@ -20,10 +20,11 @@ function Menu() {
                 <Link to={"/personal"}>Personal</Link>
               </li>
               <li>
-                <button className={st.btnLogOut}
+                <button
+                  className={st.btnLogOut}
                   onClick={() => {
                     localStorage.removeItem("userId");
-                    navigate("/")
+                    navigate("/");
                   }}
                 >
                   Logout

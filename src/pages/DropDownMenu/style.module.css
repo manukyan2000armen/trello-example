@@ -5,10 +5,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
-  left: 160px;
-  top: 80px;
+  position: absolute;
+  left: 200px;
+  top: 30px;
   gap: 3px;
+  z-index: 1;
+
 }
 
 .dropDownMenu button {
@@ -24,19 +26,41 @@
 .dropDownMenu button:hover {
   transition: 0.4s;
   background-color: rgb(116, 116, 116);
-
 }
-.btnDropClose{
+
+.btnDropClose {
   width: 100%;
   height: 40px;
-  /* background-color: blueviolet; */
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.btnDropClose button{
+
+.btnDropClose button {
   width: 30px;
   height: 30px;
   background-color: rgb(39, 39, 39);
+}
 
+
+
+.date  .forDateSave{
+  width: 80px;
+  height: 35px;
+}
+.dueDatePicker{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  left: 170px;
+  top: 30px;
+  gap: 3px;
+  width: 350px;
+  height: auto;
+  background-color: rgb(246, 246, 246);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  z-index: 1;
 }
